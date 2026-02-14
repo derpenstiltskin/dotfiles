@@ -1,17 +1,9 @@
 # environment
-export TERMINAL="kitty"
-export TERM="$TERMINAL"
-export FILEMANAGER="thunar"
-export MUSIC="rmpc"
-export MESSAGER1="discord"
-export MESSAGER2="discordo"
-export SCREENSHOT="hyprshot"
-export EDITOR="nvim"
-export WALLPAPER="waypaper"
-
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
+
+export HYPRSHOT_DIR="$HOME/screenshots"
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$XDG_CONFIG_HOME/scripts"

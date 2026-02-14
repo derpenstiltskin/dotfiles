@@ -1,0 +1,130 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 4,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces",
+    "mpd"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "tray",
+    "group/hardware-monitor",
+    "idle_inhibitor",
+    "bluetooth",
+    "network",
+    "custom/power"
+  ],
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format": "{:%a %h %m, %H:%M}"
+  },
+  "group/hardware-monitor": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "transition-left-to-right": true,
+      "click-to-reveal": true
+    },
+    "modules": [
+      "custom/hardware",
+      "memory",
+      "cpu"
+    ]
+  },
+  "custom/hardware": {
+    "format": "󱕍",
+    "tooltip": false
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": false,
+    "on-click-right": "kitty -e zsh -c 'btop; exec zsh",
+    "interval": 2
+  },
+  "memory": {
+    "format": "  {}%",
+    "on-click-right": "kitty -e zsh -c 'btop; exec zsh",
+    "interval": 2
+  },
+  "network": {
+    "format-wifi": "󰖩", 
+    "tooltip-format-wifi": "{essid}\t{ipaddr}\t{signalStrength}%",
+    "format-ethernet": "󰈀",
+    "tooltip-format": "{essid}\t{signalStrength}%",
+    "format-linked": "󰈀",
+    "format-disconnected": "󰌙",
+    "format-alt": "{ifname}: {essid}"
+  },
+  "mpd": {
+    "format": "{stateIcon}  {artist} - {title}",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "Stopped ",
+    "interval": 2,
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)"
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-connected-battery": "󰂱",
+    "tooltip-format": "{num_connections} connected",
+    "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t\t{device_battery_percentage}%"
+  },
+  "custom/power": {
+    "format" : " 󰐥 ",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "~/.config/waybar/menus/power_menu.xml",
+    "menu-actions": {
+      "shutdown": "systemctl poweroff",
+      "reboot": "systemctl reboot",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate"
+    }
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+  "hyprland/submap": {
+    "format": "{name}",
+    "tooltip": true
+  }
+}

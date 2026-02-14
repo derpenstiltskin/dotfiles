@@ -1,0 +1,222 @@
+@import "catppuccin_macchiato.css";
+
+* {
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  min-height: 0px;
+}
+
+tooltip {
+  background-color: @base;
+}
+
+#waybar .module:hover {
+  background-color: @base;
+}
+
+menu {
+  background-color: @crust;
+  border-radius: 4px;
+}
+
+menuitem {
+  border-radius: 4px;
+}
+
+menuitem:hover {
+  background-color: @base;
+}
+
+window#waybar {
+  background-color: @crust;
+  border-bottom: none;
+  color: @blue;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+button {
+  box-shadow: inset 0 -2px transparent;
+  border: none;
+  border-radius: 0;
+}
+
+button:hover {
+  box-shadow: inset 0 -2px @blue;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+}
+
+#workspaces button.active {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @blue;
+}
+
+#workspaces button.urgent {
+  background-color: @red;
+}
+
+#mode {
+  background-color: @sapphire
+}
+
+#tray,
+#clock,
+#mode,
+#mpd,
+#cpu,
+#memory,
+#disk,
+#bluetooth,
+#network,
+#tray,
+#idle-inhibitor,
+#custom-power {
+  padding: 0 10px;
+}
+
+#window,
+#workspaces {
+  margin: 0 4px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#bluetooth {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sapphire;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+#bluetooth.disabled {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @peach;
+}
+
+#bluetooth.off {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @peach;
+}
+
+#bluetooth.discoverable {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @green;
+}
+
+#bluetooth.connected {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sapphire;
+}
+
+#custom-power {
+  background-color: transparent;
+  margin-right: 2px;
+}
+
+#custom-hardware {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sky;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+@keyframes blink {
+  to {
+    background-color: @blue;
+    color: @crust;
+  }
+}
+
+label:focus {
+  background-color: @crust;
+}
+
+#cpu {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @teal;
+}
+
+#memory {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @teal;
+}
+
+#disk {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @teal;
+}
+
+#network {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sapphire;
+}
+
+#network.disconnected {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @red;
+}
+
+#tray {
+  margin-right: 10px;
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sky;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: transparent;
+  box-shadow: inset 0 -2px @maroon;
+}
+
+#idle_inhibitor {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sapphire;
+  font-size: 17px;
+}
+
+#idle_inhibitor.activated {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @maroon;
+}
+
+#mpd {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @green;
+}
+
+#mpd.disconnected {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @maroon;
+}
+
+#mpd.stopped {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @sky;
+}
+
+#mpd.paused {
+  background-color: transparent;
+  box-shadow: inset 0 -2px @green;
+}
