@@ -15,11 +15,6 @@ disabled = true
 [lua]
 disabled = true
 
-[character]
-success_symbol = "[[󰄛](green) ❯](peach)"
-error_symbol = "[[󰄛](red) ❯](peach)"
-vimcmd_symbol = "[󰄛 ❮](subtext1)"
-
 [git_branch]
 style = "bold mauve"
 

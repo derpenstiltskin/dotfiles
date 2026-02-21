@@ -5,7 +5,7 @@
   "reload_style_on_change": true,
   "modules-left": [
     "hyprland/workspaces",
-    "mpd"
+    "mpris"
   ],
   "modules-center": [
     "clock"
@@ -69,29 +69,14 @@
     "format-disconnected": "󰌙",
     "format-alt": "{ifname}: {essid}"
   },
-  "mpd": {
-    "format": "{stateIcon}  {artist} - {title}",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "Stopped ",
+  "mpris": {
+    "format": "{status_icon}  {artist} - {title}",
     "interval": 2,
-    "consume-icons": {
-      "on": " "
-    },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    },
-    "state-icons": {
+    "status-icons": {
       "paused": "",
       "playing": ""
     },
-    "tooltip-format": "MPD (connected)"
+    "tooltip-format": "MPRIS (connected)"
   },
   "bluetooth": {
     "format": "󰂯",
@@ -118,7 +103,10 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4],
+    },
   },
   "hyprland/window": {
     "separate-outputs": true

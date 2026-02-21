@@ -70,7 +70,7 @@ button:hover {
 #tray,
 #clock,
 #mode,
-#mpd,
+#mpris,
 #cpu,
 #memory,
 #disk,
@@ -201,22 +201,22 @@ label:focus {
   box-shadow: inset 0 -2px @maroon;
 }
 
-#mpd {
+#mpris {
   background-color: transparent;
   box-shadow: inset 0 -2px @green;
 }
 
-#mpd.disconnected {
+#mpris.disconnected {
   background-color: transparent;
   box-shadow: inset 0 -2px @maroon;
 }
 
-#mpd.stopped {
+#mpris.stopped {
   background-color: transparent;
   box-shadow: inset 0 -2px @sky;
 }
 
-#mpd.paused {
+#mpris.paused {
   background-color: transparent;
   box-shadow: inset 0 -2px @green;
 }
